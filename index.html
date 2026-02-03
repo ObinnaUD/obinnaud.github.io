@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dominic | Climate Finance Researcher</title>
+    <meta name="description" content="PhD Candidate in Sustainable Finance researching climate-finance linkages and sovereign risk transmission in the Global South.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-bg: #FAFAF8;
+            --color-text: #1a1a1a;
+            --color-text-secondary: #555;
+            --color-accent: #2D5A4A;
+            --color-accent-light: #E8F0ED;
+            --color-border: #e0e0e0;
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Source Sans 3', -apple-system, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--color-text);
+            background-color: var(--color-bg);
+            font-weight: 300;
+        }
+
+        ::selection {
+            background-color: var(--color-accent);
+            color: white;
+        }
+
+        a {
+            color: var(--color-accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--color-accent);
+        }
+
+        /* Header */
+        header {
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--color-border);
+            position: sticky;
+            top: 0;
+            background: var(--color-bg);
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--color-text);
+            border: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            color: var(--color-text-secondary);
+            text-transform: uppercase;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-accent);
+        }
+
+        /* Main Content */
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 5rem 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-display);
+            font-weight: 500;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--color-text);
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 6rem 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3.2rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-text h1 span {
+            color: var(--color-accent);
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            aspect-ratio: 4/5;
+            object-fit: cover;
+            object-position: center top;
+            border-radius: 4px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.9rem 2rem;
+            background-color: var(--color-accent);
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: #234a3c;
+            border-color: transparent;
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--color-accent);
+            border: 1px solid var(--color-accent);
+            margin-left: 1rem;
+        }
+
+        .btn-outline:hover {
+            background: var(--color-accent);
+            color: white;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--color-text-secondary);
+        }
+
+        .about-sidebar {
+            background: var(--color-accent-light);
+            padding: 2rem;
+            border-radius: 4px;
+            height: fit-content;
+        }
+
+        .about-sidebar h4 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--color-accent);
+        }
+
+        .about-sidebar ul {
+            list-style: none;
+        }
+
+        .about-sidebar li {
+            padding: 0.4rem 0;
+            font-size: 0.95rem;
+            color: var(--color-text-secondary);
+        }
+
+        /* Research Section */
+        .research-grid {
+            display: grid;
+            gap: 2.5rem;
+        }
+
+        .research-item {
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .research-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .research-item h3 a {
+            color: var(--color-text);
+            border-bottom: none;
+        }
+
+        .research-item h3 a:hover {
+            color: var(--color-accent);
+        }
+
+        .research-meta {
+            font-size: 0.85rem;
+            color: var(--color-accent);
+            margin-bottom: 0.75rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .research-item p {
+            color: var(--color-text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Experience Section */
+        .experience-item {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 2rem;
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+
+        .experience-date {
+            font-size: 0.9rem;
+            color: var(--color-text-secondary);
+        }
+
+        .experience-content h3 {
+            margin-bottom: 0.3rem;
+        }
+
+        .experience-org {
+            color: var(--color-accent);
+            font-size: 0.95rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .experience-content p {
+            color: var(--color-text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Contact Section */
+        #contact {
+            text-align: center;
+            padding: 6rem 0;
+        }
+
+        #contact h2 {
+            margin-bottom: 1rem;
+        }
+
+        #contact p {
+            color: var(--color-text-secondary);
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            font-weight: 400;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--color-border);
+            color: var(--color-text-secondary);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                padding: 4rem 0;
+            }
+
+            .hero-image {
+                order: -1;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+
+            .hero-text h1 {
+                font-size: 2.4rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .experience-item {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+
+            .nav-links {
+                gap: 1.5rem;
+            }
+
+            .btn-outline {
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+
+            .hero-text .btn {
+                display: block;
+                text-align: center;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-text, .hero-image {
+            animation: fadeUp 0.6s ease-out;
+        }
+
+        .hero-image {
+            animation-delay: 0.1s;
+            animation-fill-mode: both;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">Dominic</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Climate Finance <span>&</span> Sovereign Risk</h1>
+                <p>PhD Candidate in Sustainable Finance at Africa Business School, University Mohammed VI Polytechnic. Researching climate-finance linkages and sovereign risk transmission in the Global South.</p>
+                <a href="#research" class="btn">View Research</a>
+                <a href="#contact" class="btn btn-outline">Get in Touch</a>
+            </div>
+            <div class="hero-image">
+                <img src="photo.jpg" alt="Dominic - Climate Finance Researcher">
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am a PhD candidate in Sustainable Finance at Africa Business School, University Mohammed VI Polytechnic in Morocco, where I conduct research on the intersection of climate science and financial economics.</p>
+                    <p>My dissertation, "Essays on Climate Resilience, Climate Finance Impacts, and Market Mispricing in the Global South," examines how climate shocks transmit through economic systems and affect sovereign risk in developing economies. I employ methods including wavelet analysis, structural vector autoregression (SVAR), and Monte Carlo simulation to understand these complex dynamics.</p>
+                    <p>Prior to my doctoral studies, I spent nearly three years as Regional Field Project Manager at OCP Africa in Nigeria, where I managed agricultural development projects and worked directly with farming communities to improve adoption of sustainable practices.</p>
+                </div>
+                <div class="about-sidebar">
+                    <h4>Research Interests</h4>
+                    <ul>
+                        <li>Climate Finance</li>
+                        <li>Sovereign Risk</li>
+                        <li>Monetary Policy</li>
+                        <li>Agricultural Economics</li>
+                        <li>Development Finance</li>
+                    </ul>
+                    <h4 style="margin-top: 1.5rem;">Methods</h4>
+                    <ul>
+                        <li>Wavelet Analysis</li>
+                        <li>SVAR Models</li>
+                        <li>Panel Econometrics</li>
+                        <li>Monte Carlo Simulation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="research">
+            <h2>Research</h2>
+            <div class="research-grid">
+                <div class="research-item">
+                    <div class="research-meta">Working Paper</div>
+                    <h3><a href="#">Climate Shockwaves: Sovereign Risk Transmission Under Climate Stress</a></h3>
+                    <p>Using wavelet analysis to examine how climate-induced economic shocks transmit through sovereign bond markets in Global South economies. The paper investigates time-frequency dynamics of risk spillovers and identifies critical transmission channels.</p>
+                </div>
+                <div class="research-item">
+                    <div class="research-meta">Working Paper</div>
+                    <h3><a href="#">Climate-Monetary Policy Interactions: Evidence from the UK</a></h3>
+                    <p>A structural vector autoregression (SVAR) analysis examining how climate shocks affect monetary policy effectiveness, with particular focus on sectoral transmission through food manufacturing versus agriculture channels.</p>
+                </div>
+                <div class="research-item">
+                    <div class="research-meta">In Progress</div>
+                    <h3><a href="#">Rice Yield Variability and Climate Adaptation in Côte d'Ivoire</a></h3>
+                    <p>Analyzing regional variation in rice yields across three regions in Côte d'Ivoire (2012-2024), examining climate resilience strategies and their implications for food security policy.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <div class="experience-date">2023 – Present</div>
+                <div class="experience-content">
+                    <h3>PhD Candidate</h3>
+                    <div class="experience-org">Africa Business School, UM6P · Morocco</div>
+                    <p>Conducting doctoral research in Sustainable Finance with focus on climate-finance linkages. Cotutelle program with collaborating institutions in Brazil.</p>
+                </div>
+            </div>
+            <div class="experience-item">
+                <div class="experience-date">2020 – 2023</div>
+                <div class="experience-content">
+                    <h3>Regional Field Project Manager</h3>
+                    <div class="experience-org">OCP Africa · Nigeria</div>
+                    <p>Managed agricultural development projects across multiple regions, achieving significant improvements in farmer adoption rates for sustainable agricultural practices.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Get in Touch</h2>
+            <p>I am always interested in discussing research collaborations, speaking opportunities, or questions about my work.</p>
+            <div class="contact-links">
+                <a href="mailto:your.email@example.com">Email</a>
+                <a href="https://scholar.google.com/" target="_blank">Google Scholar</a>
+                <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+                <a href="https://twitter.com/" target="_blank">Twitter</a>
+                <a href="https://github.com/" target="_blank">GitHub</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Dominic. Built with care.</p>
+    </footer>
+</body>
+</html>
