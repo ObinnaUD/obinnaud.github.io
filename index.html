@@ -162,6 +162,17 @@
             color: var(--color-accent);
         }
 
+        .nav-institution-logo {
+            display: flex;
+            align-items: center;
+            margin-left: 1rem;
+        }
+
+        .nav-institution-logo img {
+            height: 36px;
+            width: auto;
+        }
+
         /* Main Content */
         main {
             max-width: 960px;
@@ -605,17 +616,7 @@
             }
         }
 
-        .affiliation-logo {
-            margin-top: 1.2rem;
-        }
-
-        .affiliation-logo img {
-            height: 48px;
-            width: auto;
-            opacity: 0.9;
-        }
-
-        .hero-text, .hero-image {
+.hero-text, .hero-image {
             animation: fadeUp 0.6s ease-out;
         }
 
@@ -630,6 +631,11 @@
         <nav aria-label="Main navigation">
             <a href="#" class="logo">Uke Obinna Dominic</a>
             <ul class="nav-links">
+                <li class="nav-institution-logo">
+                    <a href="https://abs.um6p.ma" target="_blank" rel="noopener">
+                        <img src="um6p-abs-logo.png" alt="UM6P Africa Business School">
+                    </a>
+                </li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#research">Research</a></li>
                 <li><a href="#experience">Experience</a></li>
@@ -648,9 +654,6 @@
                     PhD Candidate in Management and Organizational Sciences (Sustainable Finance)<br>
                     Africa Business School, University Mohammed VI Polytechnic (UM6P)<br>
                     Rabat, Morocco
-                </div>
-                <div class="affiliation-logo">
-                    <img src="um6p-abs-logo.png" alt="UM6P Africa Business School">
                 </div>
                 <a href="#research" class="btn">View Research</a>
                 <a href="#contact" class="btn btn-outline">Get in Touch</a>
