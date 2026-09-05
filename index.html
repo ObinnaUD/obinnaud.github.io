@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary Meta Tags -->
-    <title>Uke Obinna Dominic | Environmental and Financial Economist | PhD Candidate UM6P</title>
-    <meta name="title" content="Uke Obinna Dominic | Environmental and Financial Economist | PhD Candidate UM6P">
-    <meta name="description" content="Applied environmental and financial economist researching climate risk transmission, carbon pricing failures, and sovereign risk across advanced and emerging economies. PhD candidate at Africa Business School, UM6P Morocco.">
-    <meta name="keywords" content="Uke Obinna Dominic, environmental economics, climate risk, carbon pricing, fossil fuel subsidies, financial economics, sovereign risk, global value chains, wavelet analysis, SVAR, climate finance, Africa Business School, UM6P, PhD candidate, Global South, sustainable finance">
+    <title>Uke Obinna Dominic | Environmental and Financial Economist | PhD Candidate UM6P and UFRJ</title>
+    <meta name="title" content="Uke Obinna Dominic | Environmental and Financial Economist | PhD Candidate UM6P and UFRJ">
+    <meta name="description" content="Applied environmental and financial economist researching climate risk transmission, fossil-fuel underpricing, and sovereign risk across advanced and emerging economies. PhD candidate at Africa Business School, UM6P Morocco, under a joint doctoral agreement with COPPE, UFRJ Brazil.">
+    <meta name="keywords" content="Uke Obinna Dominic, environmental economics, climate risk, carbon pricing, fossil fuel subsidies, financial economics, sovereign risk, global value chains, structural transformation, climate adaptation, development economics, wavelet analysis, SVAR, climate finance, Africa Business School, UM6P, COPPE, UFRJ, joint doctorate, PhD candidate, sustainable finance">
     <meta name="author" content="Uke Obinna Dominic">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://obinnaud.github.io/">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://obinnaud.github.io/">
     <meta property="og:title" content="Uke Obinna Dominic | Environmental and Financial Economist">
-    <meta property="og:description" content="Applied environmental and financial economist researching climate risk transmission, carbon pricing failures, and sovereign risk across advanced and emerging economies. PhD candidate at Africa Business School, UM6P.">
+    <meta property="og:description" content="Applied environmental and financial economist researching climate risk transmission, fossil-fuel underpricing, and sovereign risk across advanced and emerging economies. PhD candidate at Africa Business School, UM6P, and COPPE, UFRJ.">
     <meta property="og:image" content="https://obinnaud.github.io/photo.jpg">
     <meta property="og:locale" content="en_US">
 
@@ -25,7 +26,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://obinnaud.github.io/">
     <meta name="twitter:title" content="Uke Obinna Dominic | Environmental and Financial Economist">
-    <meta name="twitter:description" content="Applied environmental and financial economist researching climate risk transmission, carbon pricing failures, and sovereign risk across advanced and emerging economies. PhD candidate at Africa Business School, UM6P.">
+    <meta name="twitter:description" content="Applied environmental and financial economist researching climate risk transmission, fossil-fuel underpricing, and sovereign risk across advanced and emerging economies. PhD candidate at Africa Business School, UM6P, and COPPE, UFRJ.">
     <meta name="twitter:image" content="https://obinnaud.github.io/photo.jpg">
 
     <!-- Schema.org Structured Data for Google -->
@@ -39,11 +40,18 @@
         "url": "https://obinnaud.github.io",
         "image": "https://obinnaud.github.io/photo.jpg",
         "jobTitle": "Applied Environmental and Financial Economist; PhD Candidate",
-        "worksFor": {
-            "@type": "Organization",
-            "name": "Africa Business School, University Mohammed VI Polytechnic",
-            "url": "https://www.um6p.ma"
-        },
+        "worksFor": [
+            {
+                "@type": "Organization",
+                "name": "Africa Business School, University Mohammed VI Polytechnic",
+                "url": "https://www.um6p.ma"
+            },
+            {
+                "@type": "Organization",
+                "name": "COPPE, Federal University of Rio de Janeiro",
+                "url": "https://www.coppe.ufrj.br"
+            }
+        ],
         "alumniOf": [
             {
                 "@type": "Organization",
@@ -54,7 +62,7 @@
                 "name": "Usmanu Danfodiyo University Sokoto"
             }
         ],
-        "knowsAbout": ["Environmental Economics", "Financial Economics", "Climate Risk", "Carbon Pricing", "Fossil Fuel Subsidies", "Sovereign Risk", "Global Value Chains", "Econometrics", "Wavelet Analysis", "Climate Finance"],
+        "knowsAbout": ["Environmental Economics", "Financial Economics", "Climate Risk", "Carbon Pricing", "Fossil Fuel Subsidies", "Sovereign Risk", "Global Value Chains", "Structural Transformation", "Development Economics", "Climate Adaptation", "Econometrics", "Wavelet Analysis", "Climate Finance"],
         "sameAs": [
             "https://www.linkedin.com/in/obinnauke/",
             "https://scholar.google.com/citations?user=6KmfsO4AAAAJ&hl=en&oi=ao",
@@ -142,6 +150,7 @@
             font-weight: 500;
             color: var(--color-text);
             border: none;
+            white-space: nowrap;
         }
 
         .nav-links {
@@ -173,6 +182,20 @@
             width: auto;
         }
 
+        .nav-institution-logo a + a {
+            margin-left: 0.9rem;
+        }
+
+        @media (max-width: 1000px) {
+            .nav-institution-logo img {
+                height: 28px;
+            }
+
+            .nav-institution-logo a + a {
+                margin-left: 0.7rem;
+            }
+        }
+
         /* Main Content */
         main {
             max-width: 960px;
@@ -183,6 +206,7 @@
         section {
             padding: 4.5rem 0;
             border-bottom: 1px solid var(--color-border);
+            scroll-margin-top: 7rem;
         }
 
         section:last-of-type {
@@ -559,18 +583,22 @@
         @media (max-width: 768px) {
             .hero {
                 grid-template-columns: 1fr;
-                gap: 2.5rem;
-                padding: 3.5rem 0;
+                gap: 1.75rem;
+                padding: 2rem 0 3.25rem;
             }
 
             .hero-image {
                 order: -1;
-                max-width: 240px;
+                max-width: 220px;
                 margin: 0 auto;
             }
 
             .hero-text h1 {
-                font-size: 2.2rem;
+                font-size: 2rem;
+            }
+
+            section {
+                scroll-margin-top: 12.5rem;
             }
 
             .about-content {
@@ -585,12 +613,31 @@
                 gap: 0.4rem;
             }
 
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.75rem;
+                padding: 0 1.25rem;
+            }
+
             .nav-links {
                 gap: 1.25rem;
+                flex-wrap: wrap;
+                justify-content: center;
             }
 
             .nav-links a {
                 font-size: 0.75rem;
+            }
+
+            .nav-institution-logo {
+                flex-basis: 100%;
+                justify-content: center;
+                margin-left: 0;
+            }
+
+            .nav-institution-logo img {
+                height: 24px;
             }
 
             .btn-outline {
@@ -639,6 +686,9 @@
                     <a href="https://abs.um6p.ma" target="_blank" rel="noopener">
                         <img src="um6p-abs-logo.png" alt="UM6P Africa Business School">
                     </a>
+                    <a href="https://www.coppe.ufrj.br" target="_blank" rel="noopener">
+                        <img src="coppe-ufrj-logo.png" alt="COPPE UFRJ, Instituto Alberto Luiz Coimbra de Pos-Graduacao e Pesquisa de Engenharia">
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -652,8 +702,8 @@
                 <p>Researching how fossil-fuel underpricing, carbon pricing failures, and climate shocks transmit through financial systems, sovereign debt markets, and global value chains across advanced and emerging economies.</p>
                 <div class="affiliation">
                     Applied Environmental and Financial Economist<br>
-                    PhD Candidate, Africa Business School, University Mohammed VI Polytechnic (UM6P)<br>
-                    Rabat, Morocco
+                    Joint PhD Candidate, Africa Business School (UM6P) and COPPE (UFRJ)<br>
+                    Rabat, Morocco and Rio de Janeiro, Brazil
                 </div>
                 <a href="#research" class="btn">View Research</a>
                 <a href="#contact" class="btn btn-outline">Get in Touch</a>
@@ -667,8 +717,8 @@
             <h2>About</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>I am an applied environmental and financial economist completing my PhD at Africa Business School, University Mohammed VI Polytechnic in Morocco. My doctorate is formally in Management and Organizational Sciences (Sustainable Finance), supervised by Prof. Amine Ben Amar (Finance Cluster, ABS) and Prof. Olga Gorelkina (Moroccan Center for Game Theory). My dissertation examines how climate shocks, carbon pricing failures, and fossil-fuel underpricing transmit through financial systems, sovereign debt markets, and global value chains across both advanced and emerging economies.</p>
-                    <p>My research spans seven papers covering fossil-fuel underpricing and GVC lock-in, sovereign CDS dynamics, climate risk transmission through food manufacturing in the UK, carbon price deficits and fiscal equity across 174 countries, microfinance and climate resilience in Sub-Saharan Africa, and corporate bond spreads in emerging markets. I employ advanced econometric methods including SVAR with recursive identification, time-varying local projections with stochastic volatility, wavelet coherence analysis, triple fixed effects panels, and bootstrapped mediation analysis.</p>
+                    <p>I am an applied environmental and financial economist completing my PhD at Africa Business School, University Mohammed VI Polytechnic in Morocco, under a joint doctoral agreement with Decision Sciences, Production Engineering, at COPPE, Federal University of Rio de Janeiro, Brazil. My doctorate is formally in Management and Organizational Sciences (Sustainable Finance), supervised by Prof. Amine Ben Amar (Finance Cluster, ABS) and Prof. Olga Gorelkina (Moroccan Center for Game Theory), with Prof. Luan Santos (COPPE, UFRJ) as co-supervisor. My dissertation examines how climate shocks, carbon pricing failures, and fossil-fuel underpricing transmit through financial systems, sovereign debt markets, and global value chains across both advanced and emerging economies.</p>
+                    <p>My research covers fossil-fuel underpricing and the structural transformation of global value chains, sovereign CDS dynamics and climate vulnerability, climate risk transmission through food manufacturing in the UK, the decomposition of carbon price deficits across 174 countries, the insurability of covariate climate risk for African households, the financial adaptation capacity of Nigerian non-farm enterprises, and corporate bond spreads in emerging markets. I employ advanced econometric methods including SVAR with recursive identification, time-varying local projections with stochastic volatility, wavelet coherence analysis, triple fixed effects panels, within-household first differences, and event study designs.</p>
                     <p>Before pursuing doctoral studies, I spent over three years at OCP Africa in Nigeria as a Regional Field Project Manager and Research Agronomist, where I led agricultural development initiatives in partnership with USAID/TradeHub. I also founded AgriBox SARL, a climate-smart hydroponic enterprise in Morocco.</p>
                 </div>
                 <div class="about-sidebar">
@@ -678,7 +728,8 @@
                         <li>Carbon Pricing and Fossil Fuel Subsidies</li>
                         <li>Climate Risk Transmission</li>
                         <li>Sovereign Risk and Credit Markets</li>
-                        <li>Global Value Chains</li>
+                        <li>Global Value Chains and Structural Transformation</li>
+                        <li>Climate Adaptation and Household Finance</li>
                         <li>Climate Finance and Sustainable Finance</li>
                     </ul>
                     <h4>Methods</h4>
@@ -687,7 +738,8 @@
                         <li>Wavelet Coherence Analysis</li>
                         <li>Triple Fixed Effects Panels</li>
                         <li>TV-LP-SV</li>
-                        <li>Mediation Analysis (IKY)</li>
+                        <li>Within-Household First Differences</li>
+                        <li>Event Study Designs</li>
                         <li>Instrumental Variables</li>
                     </ul>
                 </div>
@@ -703,6 +755,14 @@
                     <div class="education-org">Africa Business School, University Mohammed VI Polytechnic (UM6P) · Rabat, Morocco</div>
                     <p>Dissertation: <em>Climate Risk, Carbon Pricing, and Financial Markets: Essays in Environmental and Financial Economics</em><br>
                     Supervisors: Prof. Amine Ben Amar &amp; Prof. Olga Gorelkina</p>
+                </div>
+            </div>
+            <div class="education-item">
+                <div class="education-date">2023 – Present</div>
+                <div class="education-content">
+                    <h3>Joint Doctorate, Decision Sciences, Production Engineering</h3>
+                    <div class="education-org">COPPE, Federal University of Rio de Janeiro (UFRJ) · Rio de Janeiro, Brazil</div>
+                    <p>Co-supervisor: Prof. Luan Santos</p>
                 </div>
             </div>
             <div class="education-item">
@@ -727,52 +787,59 @@
             <div class="research-grid">
 
                 <article class="research-item">
-                    <div class="research-meta">Job Market Paper &nbsp;·&nbsp; Submitted</div>
-                    <h3>When Climate Stress Does Not Reallocate: Fossil-Fuel Underpricing and Carbon-Intensive Global Value Chains</h3>
+                    <div class="research-meta">Job Market Paper &nbsp;·&nbsp; Under Review &nbsp;·&nbsp; Structural Change and Economic Dynamics</div>
+                    <h3>Fossil Fuel Underpricing Blocks Disaster-Induced Structural Transformation: Evidence from Carbon-Intensive Global Value Chains</h3>
                     <p class="research-authors"><strong>Uke, O. D.</strong></p>
-                    <p>Submitted to <em>Ecological Economics</em>. Using a country-sector-year panel of 77 countries, 18 manufacturing sectors, and seven years (2016–2022) under triple fixed effects, I show that fossil-fuel underpricing buffers carbon-intensive GVC sectors against climate-disaster-driven reallocation. The marginal effect of a climate disaster on high-carbon GVC output flips sign at an underpricing threshold of 1.845% of GDP (68.5th percentile). The result holds in all 77 leave-one-country-out estimates.</p>
+                    <p>Using a country-sector-year panel of 77 countries, 18 manufacturing sectors, and seven years (2016–2022) under triple fixed effects, I show that fossil-fuel underpricing blocks the reallocation away from carbon-intensive sectors that climate disasters would otherwise induce. The marginal effect of a climate disaster on high-carbon GVC output flips sign at an underpricing threshold of 1.845% of GDP (68.5th percentile), and 31.5% of country-sector-year cells sit on the lock-in side of that threshold. Lock-in concentrates in fossil-fuel exporters, non-high-income countries, and weak-governance settings, and the result holds in all 77 leave-one-country-out estimates.</p>
                 </article>
 
                 <article class="research-item">
-                    <div class="research-meta">Under Review</div>
+                    <div class="research-meta">Revise and Resubmit &nbsp;·&nbsp; International Review of Financial Analysis</div>
                     <h3>Riding the Climate Wave: A Wavelet Analysis of Sovereign Risk in Developed and Developing Economies</h3>
                     <p class="research-authors"><strong>Uke, O. D.</strong>, Ben Amar, A., Gorelkina, O.</p>
-                    <p>Under review at <em>International Review of Financial Analysis</em> (FINANA-D-25-05094); required reviews complete March 2026. Using wavelet coherence analysis on 59 countries (2008–2021), we find persistent long-term co-movement between sovereign CDS spreads and climate vulnerability, with bidirectional Toda-Yamamoto causality and no significant difference between advanced economies and EMDEs.</p>
+                    <p>Using 59 countries over 2008–2021, we show that climate vulnerability carries a large cross-country premium in sovereign CDS spreads, and that neither development status nor adaptive capacity insulates a sovereign against it. Wavelet coherence documents the time-frequency structure of the co-movement, which is pervasive across horizons and survives an AR(1) red-noise null.</p>
                 </article>
 
                 <article class="research-item">
-                    <div class="research-meta">Working Paper</div>
+                    <div class="research-meta">Submitted &nbsp;·&nbsp; Economic Modelling</div>
                     <h3>Climate Shocks, Sectoral Transmission, and Monetary Policy: Evidence from Food Manufacturing in the United Kingdom</h3>
                     <p class="research-authors"><strong>Uke, O. D.</strong>, Ben Amar, A., Gorelkina, O.</p>
-                    <p>Presented at the 3rd QFDAM Conference, Rabat, June 2026. Target: <em>Energy Economics</em>. Using an eight-variable SVAR over 1990Q1–2025Q3, we show that food manufacturing contributes 1.4× more than agriculture to inflation forecast error variance, and that this contribution rose 13% between subsamples while agriculture's fell 93%.</p>
+                    <p>Presented at the 3rd QFDAM Conference, Rabat, June 2026. Using an eight-variable SVAR over 1990Q1–2025Q3, together with local projections and time-varying local projections with stochastic volatility, we show that food manufacturing contributes 1.4× more than agriculture to inflation forecast error variance, and that this contribution rose 13% between subsamples while agriculture's fell 93%. Central banks tracking climate-driven food inflation should watch downstream manufacturing rather than domestic agriculture.</p>
                 </article>
 
                 <article class="research-item">
-                    <div class="research-meta">Working Paper</div>
-                    <h3>Fiscal Capacity, Not Climate Exposure: Carbon Price Deficits and the Global Equity Burden of Fossil Fuel Subsidies</h3>
-                    <p class="research-authors"><strong>Uke, O. D.</strong>, Ben Amar, A., Gorelkina, O.</p>
-                    <p>Target: <em>Energy Economics</em>. We construct the first near-global panel of effective carbon prices for 174 countries (2015–2022). The average effective carbon price is −$68/tonne of CO₂. Normalized carbon price deficits exhibit a monotonic equity gradient driven by fiscal capacity rather than direct climate exposure, confirmed by bootstrapped mediation analysis (Imai-Keele-Yamamoto).</p>
+                    <div class="research-meta">Submitted &nbsp;·&nbsp; Energy Policy</div>
+                    <h3>Fiscal Capacity, Not Climate Exposure: Decomposing Global Fossil-Fuel Underpricing and Its Equity Burden</h3>
+                    <p class="research-authors"><strong>Uke, O. D.</strong>, Gorelkina, O., Ben Amar, A.</p>
+                    <p>We construct a near-global panel of effective carbon prices for 174 countries (2015–2022) and decompose the underpricing shortfall into a domestic wedge, made up of supply-cost gaps, foregone consumption taxes and local air pollution, and a global climate wedge. Fiscal capacity predicts the domestic wedge, which is roughly two thirds of the total, while no observable state characteristic predicts the climate wedge. Climate vulnerability does not raise deficits directly, yet vulnerability and weak fiscal capacity coincide so closely that the income-normalised burden is about twenty times higher in the most vulnerable quintile. <a href="https://doi.org/10.5281/zenodo.21891233" target="_blank" rel="noopener">Replication package</a>.</p>
                 </article>
 
                 <article class="research-item">
-                    <div class="research-meta">Working Paper &nbsp;·&nbsp; Under Review</div>
-                    <h3>Building Resilience, Reducing Risk: A Systematic Review of Climate Resilience, Climate Finance Impacts, and Market Mispricing in the Global South</h3>
-                    <p class="research-authors"><strong>Uke, O. D.</strong>, Ben Amar, A., Gorelkina, O.</p>
-                    <p>A PRISMA-based systematic literature review consolidating the relationship between climate resilience initiatives, financial risk reduction, and market mispricing in the Global South.</p>
+                    <div class="research-meta">Submitted &nbsp;·&nbsp; World Development</div>
+                    <h3>Financial Adaptation Capacity and the Insurability of Covariate Climate Risk: Evidence from African Households</h3>
+                    <p class="research-authors"><strong>Uke, O. D.</strong>, Cort, T. (Yale School of Management)</p>
+                    <p>Using a within-household design across shock types in the EHCVM surveys of seven WAEMU states, with replication in the Malawi, Uganda and Nigeria LSMS-ISA panels, we show that the insurability of a climate shock depends on the correlation between a household's financial support and the shock, not on the size of that support. Covariate climate shocks fall on the consumption margin, and only support reaching from beyond the roughly 200 km rainfall covariance radius, such as remittances and mobile money, insures against them. Local credit does not. Adaptation capacity is therefore plural: rural households rely on remittances, urban households on mobile money.</p>
                 </article>
 
                 <article class="research-item">
                     <div class="research-meta">Work in Progress</div>
-                    <h3>Microfinance and Climate Resilience: Disentangling the Mechanisms of Social Vulnerability Reduction in Climate-Vulnerable Regions</h3>
-                    <p class="research-authors"><strong>Uke, O. D.</strong>, Todd, C. (Yale University)</p>
-                    <p>Multi-country panel using World Bank LSMS-ISA data (Nigeria, Uganda, Malawi); examining pathways from microfinance products to household adaptive capacity.</p>
+                    <h3>Does Support Arrive When the Water Does? Financial Adaptation Capacity of Nigerian Non-Farm Enterprises</h3>
+                    <p class="research-authors"><strong>Uke, O. D.</strong></p>
+                    <p>Carries the covariance logic from households to firms. Event study of continuous flood exposure across five waves of the Nigeria General Household Survey Panel and the high-frequency NLPS rounds around the 2022 floods, combined with a planned enterprise survey in the Anambra River basin.</p>
                 </article>
 
                 <article class="research-item">
                     <div class="research-meta">Work in Progress</div>
                     <h3>Sovereign Climate Risk and Corporate Bond Spreads: Evidence from Emerging Markets</h3>
-                    <p class="research-authors"><strong>Uke, O. D.</strong>, Ben Amar, A., Santos, L. (UFRJ Brazil)</p>
-                    <p>Panel of 30 emerging markets, ~8,000 corporate bonds (2018–2024); fixed effects and instrumental variables; implications for IFRS S1/S2 climate disclosure standards.</p>
+                    <p class="research-authors"><strong>Uke, O. D.</strong>, Santos, L. (COPPE, UFRJ)</p>
+                    <p>Panel of 30 emerging markets and roughly 8,000 corporate bonds (2018–2024); fixed effects and instrumental variables; implications for IFRS S1 and S2 climate disclosure standards. Developed under the joint doctoral agreement with COPPE, UFRJ.</p>
+                </article>
+
+                <article class="research-item">
+                    <div class="research-meta">Thesis Chapter</div>
+                    <h3>Building Resilience, Reducing Risk: A Systematic Review of Climate Resilience, Climate Finance Impacts, and Market Mispricing in the Global South</h3>
+                    <p class="research-authors"><strong>Uke, O. D.</strong>, Ben Amar, A., Gorelkina, O.</p>
+                    <p>A PRISMA-based systematic literature review consolidating the relationship between climate resilience initiatives, financial risk reduction, and market mispricing in the Global South. Retained as a chapter of the dissertation rather than submitted separately.</p>
                 </article>
 
                 <article class="research-item">
@@ -826,7 +893,7 @@
                 <div class="experience-date">Oct 2023 – Present</div>
                 <div class="experience-content">
                     <h3>PhD Researcher, Environmental and Financial Economics</h3>
-                    <div class="experience-org">Africa Business School, UM6P · Rabat, Morocco</div>
+                    <div class="experience-org">Africa Business School, UM6P · Rabat, Morocco &nbsp;·&nbsp; COPPE, UFRJ · Rio de Janeiro, Brazil</div>
                     <p>Produce policy-relevant research on climate shock propagation, physical risk pricing, and sovereign debt vulnerability. Apply advanced time-series and panel econometric methods. Disseminate findings at international conferences and prepare manuscripts for peer-reviewed journals.</p>
                 </div>
             </div>
@@ -869,19 +936,19 @@
             <div class="awards-list">
                 <div class="award-item">
                     <span class="award-icon">◆</span>
-                    <p><strong>Full Doctoral Merit Scholarship</strong>,Africa Business School, UM6P Morocco (2023)</p>
+                    <p><strong>Full Doctoral Merit Scholarship</strong>, Africa Business School, UM6P Morocco (2023)</p>
                 </div>
                 <div class="award-item">
                     <span class="award-icon">◆</span>
-                    <p><strong>HULT Prize in Innovation</strong>,Mohammed VI Polytechnic University (2021)</p>
+                    <p><strong>HULT Prize in Innovation</strong>, Mohammed VI Polytechnic University (2021)</p>
                 </div>
                 <div class="award-item">
                     <span class="award-icon">◆</span>
-                    <p><strong>NARSAD Deliberative Polling Award</strong>,UM6P &amp; Stanford University Collaboration (2021)</p>
+                    <p><strong>NARSAD Deliberative Polling Award</strong>, UM6P &amp; Stanford University Collaboration (2021)</p>
                 </div>
                 <div class="award-item">
                     <span class="award-icon">◆</span>
-                    <p><strong>IBN Rochid Foundation for Sciences and Innovation Scholarship</strong>,M.Sc. Studies, OCP/UM6P (2020)</p>
+                    <p><strong>IBN Rochid Foundation for Sciences and Innovation Scholarship</strong>, M.Sc. Studies, OCP/UM6P (2020)</p>
                 </div>
             </div>
         </section>
@@ -895,7 +962,7 @@
                 <a href="https://scholar.google.com/citations?user=6KmfsO4AAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Google Scholar</a>
                 <a href="https://github.com/obinnaud" target="_blank" rel="noopener">GitHub</a>
             </div>
-            <p class="contact-info">Rabat, Morocco</p>
+            <p class="contact-info">Rabat, Morocco &nbsp;·&nbsp; Rio de Janeiro, Brazil</p>
         </section>
     </main>
 
