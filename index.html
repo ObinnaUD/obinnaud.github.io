@@ -142,6 +142,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 2rem;
         }
 
         .logo {
@@ -155,8 +156,9 @@
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 1.4rem;
             list-style: none;
+            align-items: center;
         }
 
         .nav-links a {
@@ -178,7 +180,7 @@
         }
 
         .nav-institution-logo img {
-            height: 36px;
+            height: 28px;
             width: auto;
         }
 
@@ -186,9 +188,28 @@
             margin-left: 0.9rem;
         }
 
+        @media (max-width: 940px) {
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.75rem;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-institution-logo {
+                flex-basis: 100%;
+                justify-content: center;
+                margin-left: 0;
+            }
+        }
+
         @media (max-width: 1000px) {
             .nav-institution-logo img {
-                height: 28px;
+                height: 26px;
             }
 
             .nav-institution-logo a + a {
@@ -314,8 +335,8 @@
         /* About Section */
         .about-content {
             display: grid;
-            grid-template-columns: 1.8fr 1fr;
-            gap: 3.5rem;
+            grid-template-columns: 1.6fr 1fr;
+            gap: 3rem;
         }
 
         .about-text p {
@@ -334,13 +355,13 @@
             font-family: var(--font-display);
             font-size: 1.05rem;
             font-weight: 600;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.6rem;
             color: var(--color-accent);
         }
 
         .about-sidebar ul {
             list-style: none;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.25rem;
         }
 
         .about-sidebar ul:last-child {
@@ -351,6 +372,20 @@
             padding: 0.35rem 0;
             font-size: 0.9rem;
             color: var(--color-text-secondary);
+        }
+
+        .about-sidebar ul.tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.35rem;
+        }
+
+        .about-sidebar ul.tags li {
+            padding: 0.25rem 0.55rem;
+            font-size: 0.78rem;
+            line-height: 1.35;
+            background: rgba(255, 255, 255, 0.75);
+            border-radius: 3px;
         }
 
         /* Education Section */
@@ -731,7 +766,7 @@
                         <li><strong>Secondary:</strong> Financial Economics, Development Economics, Applied Econometrics</li>
                     </ul>
                     <h4>Research Interests</h4>
-                    <ul>
+                    <ul class="tags">
                         <li>Environmental and Energy Economics</li>
                         <li>Carbon Pricing and Fossil Fuel Subsidies</li>
                         <li>Carbon Border Adjustment and Transition Risk</li>
@@ -742,7 +777,7 @@
                         <li>Climate Finance and Adaptation</li>
                     </ul>
                     <h4>Methods</h4>
-                    <ul>
+                    <ul class="tags">
                         <li>SVAR and Local Projections</li>
                         <li>TV-LP-SV</li>
                         <li>Wavelet and Partial Wavelet Coherence</li>
