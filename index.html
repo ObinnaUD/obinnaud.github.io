@@ -327,11 +327,30 @@
             transform: translateY(-1px);
         }
 
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
         .btn-outline {
             background: transparent;
             color: var(--color-accent);
             border: 1px solid var(--color-accent);
-            margin-left: 0.75rem;
+        }
+
+        .section-doc {
+            margin: -0.6rem 0 1.8rem;
+            font-size: 0.85rem;
+            color: var(--color-text-secondary);
+        }
+
+        .section-doc a {
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .section-doc a:hover {
+            border-bottom-color: var(--color-accent);
         }
 
         .hero-materials {
@@ -774,9 +793,8 @@
                 height: 24px;
             }
 
-            .btn-outline {
-                margin-left: 0;
-                margin-top: 0.75rem;
+            .hero-actions {
+                flex-direction: column;
             }
 
             .hero-text .btn {
@@ -842,10 +860,11 @@
                     Joint doctorate with COPPE-UFRJ, conferring both degrees<br>
                     Rabat, Morocco and Rio de Janeiro, Brazil
                 </div>
-                <a href="#research" class="btn">View Research</a>
-                <a href="Uke_Obinna_Dominic_JMP.pdf" class="btn btn-outline" target="_blank" rel="noopener">Job Market Paper</a>
-                <a href="Uke_Obinna_Dominic_CV.pdf" class="btn btn-outline" download>Download CV</a>
-                <a href="#contact" class="btn btn-outline">Get in Touch</a>
+                <div class="hero-actions">
+                    <a href="#research" class="btn">View Research</a>
+                    <a href="Uke_Obinna_Dominic_JMP.pdf" class="btn btn-outline" target="_blank" rel="noopener">Job Market Paper</a>
+                    <a href="Uke_Obinna_Dominic_CV.pdf" class="btn btn-outline" download>Download CV</a>
+                </div>
                 <p class="hero-materials">Also available: <a href="Uke_Obinna_Dominic_Research_Statement.pdf" target="_blank" rel="noopener">research statement</a> and <a href="Uke_Obinna_Dominic_Teaching_Statement.pdf" target="_blank" rel="noopener">teaching statement</a>.</p>
             </div>
             <div class="hero-image">
@@ -935,6 +954,7 @@
 
         <section id="research">
             <h2>Research</h2>
+            <p class="section-doc"><a href="Uke_Obinna_Dominic_Research_Statement.pdf" target="_blank" rel="noopener">Research statement</a> (PDF)</p>
             <div class="research-grid">
 
                 <article class="research-item">
@@ -1089,6 +1109,7 @@
 
 <section id="teaching">
             <h2>Teaching</h2>
+            <p class="section-doc"><a href="Uke_Obinna_Dominic_Teaching_Statement.pdf" target="_blank" rel="noopener">Teaching statement</a> (PDF)</p>
             <div class="conferences-list">
                 <div class="conference-item">
                     <div class="conference-date">Sept – Nov 2026</div>
