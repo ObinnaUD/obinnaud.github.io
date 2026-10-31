@@ -445,11 +445,11 @@
         /* Research Section */
         .research-grid {
             display: grid;
-            gap: 2rem;
+            gap: 1.6rem;
         }
 
         .research-item {
-            padding-bottom: 2rem;
+            padding-bottom: 1.6rem;
             border-bottom: 1px solid var(--color-border);
         }
 
@@ -516,6 +516,59 @@
         .research-item .doi {
             font-size: 0.85rem;
             word-break: break-all;
+        }
+
+        /* Collapsible abstracts */
+        .abstract {
+            margin-top: 0.7rem;
+        }
+
+        .abstract > summary {
+            cursor: pointer;
+            list-style: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            transition: opacity 0.2s ease;
+        }
+
+        .abstract > summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .abstract > summary:hover {
+            opacity: 0.6;
+        }
+
+        .abstract > summary:focus-visible {
+            outline: 2px solid var(--color-accent);
+            outline-offset: 3px;
+            border-radius: 2px;
+        }
+
+        .abstract > summary::before {
+            content: "";
+            width: 0;
+            height: 0;
+            border-left: 4.5px solid currentColor;
+            border-top: 3.5px solid transparent;
+            border-bottom: 3.5px solid transparent;
+            transition: transform 0.2s ease;
+        }
+
+        .abstract[open] > summary::before {
+            transform: rotate(90deg);
+        }
+
+        .abstract > p {
+            margin-top: 0.65rem;
+            padding-left: 1rem;
+            border-left: 2px solid var(--color-border);
         }
 
         /* Experience Section */
@@ -872,42 +925,60 @@
                     <div class="research-meta">Job Market Paper &nbsp;·&nbsp; October 2026</div>
                     <h3>Where the Windfall Goes: Fossil Revenue, Domestic Absorption and Carbon Emissions</h3>
                     <p class="research-authors"><strong>Uke, O. D.</strong></p>
-                    <p>Every rise in the world price of oil, gas or coal transfers income to producer economies, and the energy transition will make these transfers more volatile before it makes them smaller. Using national accounts, government revenue and sector-level fossil CO₂ for 163 countries over 1981–2024, and a windfall shock built from predetermined fossil rents and unexpected world fuel prices, I estimate what windfalls do to producer economies and their emissions. In the 75 economies with resource-revenue data, almost all of the windfall reaches the government budget; most is saved abroad in the first year and absorbed into consumption, investment and imports within two. Each dollar of windfall revenue adds 0.52 kg of CO₂ at home (95% weak-instrument-robust interval: 0.20 to 0.89 kg), about half the carbon intensity of an average dollar of GDP, mostly through road transport, power and buildings. Instrumenting the windfall with OPEC oil supply news reproduces the macroeconomic, construction, buildings and road transport responses. In cement, buildings and power, booms raise emissions and busts of the same size do not lower them. Over the 2003–2014 commodity boom, windfalls added about 2.7 billion tonnes of CO₂, worth roughly $500 billion at the social cost of carbon.</p>
+                    <details class="abstract">
+                        <summary>Abstract</summary>
+                        <p>Every rise in the world price of oil, gas or coal transfers income to producer economies, and the energy transition will make these transfers more volatile before it makes them smaller. Using national accounts, government revenue and sector-level fossil CO₂ for 163 countries over 1981–2024, and a windfall shock built from predetermined fossil rents and unexpected world fuel prices, I estimate what windfalls do to producer economies and their emissions. In the 75 economies with resource-revenue data, almost all of the windfall reaches the government budget; most is saved abroad in the first year and absorbed into consumption, investment and imports within two. Each dollar of windfall revenue adds 0.52 kg of CO₂ at home (95% weak-instrument-robust interval: 0.20 to 0.89 kg), about half the carbon intensity of an average dollar of GDP, mostly through road transport, power and buildings. Instrumenting the windfall with OPEC oil supply news reproduces the macroeconomic, construction, buildings and road transport responses. In cement, buildings and power, booms raise emissions and busts of the same size do not lower them. Over the 2003–2014 commodity boom, windfalls added about 2.7 billion tonnes of CO₂, worth roughly $500 billion at the social cost of carbon.</p>
+                    </details>
                 </article>
 
                 <article class="research-item">
                     <div class="research-meta">Under Review &nbsp;·&nbsp; International Review of Financial Analysis</div>
                     <h3>Riding the Climate Wave: A Wavelet Analysis of Sovereign Risk in Developed and Developing Economies</h3>
                     <p class="research-authors"><strong>Uke, O. D.</strong>, Ben Amar, A., Gorelkina, O.</p>
-                    <p>Which dimension of climate risk do sovereign credit markets price, physical exposure or the capacity to adapt? Using 59 economies (28 advanced, 31 EMDE) over 2008–2021, wavelet coherence shows co-movement between climate vulnerability and CDS spreads across short, medium and low frequencies, neither concentrated in the long horizon nor systematically different between advanced economies and EMDEs. In the cross-section the vulnerability gradient vanishes once development is controlled: what is priced is <em>readiness</em>. For EMDEs, closing the readiness gap relative to advanced economies is associated with about 74% smaller spreads, net of income, public debt and governance. Significance is assessed against an AR(1) red-noise null with 10,000 Monte Carlo simulations. We also document and correct a measurement convention that inflates conventional coherence summaries.</p>
+                    <details class="abstract">
+                        <summary>Abstract</summary>
+                        <p>Which dimension of climate risk do sovereign credit markets price, physical exposure or the capacity to adapt? Using 59 economies (28 advanced, 31 EMDE) over 2008–2021, wavelet coherence shows co-movement between climate vulnerability and CDS spreads across short, medium and low frequencies, neither concentrated in the long horizon nor systematically different between advanced economies and EMDEs. In the cross-section the vulnerability gradient vanishes once development is controlled: what is priced is <em>readiness</em>. For EMDEs, closing the readiness gap relative to advanced economies is associated with about 74% smaller spreads, net of income, public debt and governance. Significance is assessed against an AR(1) red-noise null with 10,000 Monte Carlo simulations. We also document and correct a measurement convention that inflates conventional coherence summaries.</p>
+                    </details>
                 </article>
 
                 <article class="research-item">
                     <div class="research-meta">Submitted &nbsp;·&nbsp; Energy Policy</div>
                     <h3>Fiscal Capacity, Not Climate Exposure: Decomposing Global Fossil-Fuel Underpricing and Its Equity Burden</h3>
                     <p class="research-authors"><strong>Uke, O. D.</strong>, Gorelkina, O., Ben Amar, A.</p>
-                    <p>Only Sweden, Norway and Finland price carbon above zero once subsidies are netted out; the mean effective carbon price across 174 countries is −$88 per tonne of CO₂. We construct a near-global panel of effective carbon prices for 174 countries (2015–2022) and decompose the underpricing shortfall into a domestic wedge, made up of supply-cost gaps, foregone consumption taxes and local air pollution, and a global climate wedge. Fiscal capacity predicts the domestic wedge, which is roughly two thirds of the total, while no observable state characteristic predicts the climate wedge. Climate vulnerability does not raise deficits directly, yet vulnerability and weak fiscal capacity coincide so closely that the income-normalised burden is about twenty times higher in the most vulnerable quintile. <a href="https://doi.org/10.5281/zenodo.21891233" target="_blank" rel="noopener">Replication package</a>.</p>
+                    <details class="abstract">
+                        <summary>Abstract</summary>
+                        <p>Only Sweden, Norway and Finland price carbon above zero once subsidies are netted out; the mean effective carbon price across 174 countries is −$88 per tonne of CO₂. We construct a near-global panel of effective carbon prices for 174 countries (2015–2022) and decompose the underpricing shortfall into a domestic wedge, made up of supply-cost gaps, foregone consumption taxes and local air pollution, and a global climate wedge. Fiscal capacity predicts the domestic wedge, which is roughly two thirds of the total, while no observable state characteristic predicts the climate wedge. Climate vulnerability does not raise deficits directly, yet vulnerability and weak fiscal capacity coincide so closely that the income-normalised burden is about twenty times higher in the most vulnerable quintile. <a href="https://doi.org/10.5281/zenodo.21891233" target="_blank" rel="noopener">Replication package</a>.</p>
+                    </details>
                 </article>
 
                 <article class="research-item">
                     <div class="research-meta">Submitted &nbsp;·&nbsp; World Development</div>
                     <h3>Financial Reach and Household Coping under Climate Shocks: Evidence from Ten African Countries</h3>
                     <p class="research-authors"><strong>Uke, O. D.</strong>, <a href="https://som.yale.edu/faculty-research/faculty-directory/todd-cort" target="_blank" rel="noopener">Cort, T.</a> (Yale School of Management)</p>
-                    <p>Harmonised shock-and-coping modules from ten African countries allow a within-household comparison of responses to a covariate climate shock and to an idiosyncratic one. Covariate shocks are associated with a 1.9 to 2.2 percentage-point higher probability of reducing consumption, while idiosyncratic shocks more often trigger asset sales. In the 2018 West African sample, a sender elsewhere in the country is associated with a 4.6 percentage-point smaller shift towards cutting consumption than a same-region sender, and survives administrative-region fixed effects; credit access is statistically indistinguishable from zero. Growing-season rainfall anomalies stay correlated across roughly 254 km, which motivates the reach measure without identifying it. The estimates are associational, and the point is that instrument ownership alone is an incomplete measure of climate resilience: the exposure of the income backing a claim matters alongside the instrument a household holds.</p>
+                    <details class="abstract">
+                        <summary>Abstract</summary>
+                        <p>Harmonised shock-and-coping modules from ten African countries allow a within-household comparison of responses to a covariate climate shock and to an idiosyncratic one. Covariate shocks are associated with a 1.9 to 2.2 percentage-point higher probability of reducing consumption, while idiosyncratic shocks more often trigger asset sales. In the 2018 West African sample, a sender elsewhere in the country is associated with a 4.6 percentage-point smaller shift towards cutting consumption than a same-region sender, and survives administrative-region fixed effects; credit access is statistically indistinguishable from zero. Growing-season rainfall anomalies stay correlated across roughly 254 km, which motivates the reach measure without identifying it. The estimates are associational, and the point is that instrument ownership alone is an incomplete measure of climate resilience: the exposure of the income backing a claim matters alongside the instrument a household holds.</p>
+                    </details>
                 </article>
 
                 <article class="research-item">
                     <div class="research-meta">Submitted &nbsp;·&nbsp; Economic Analysis and Policy</div>
                     <h3>Fossil Fuel Underpricing and the Carbon Composition of Manufacturing Value Chains in Climate-Disaster Years</h3>
                     <p class="research-authors"><strong>Uke, O. D.</strong></p>
-                    <p>Holding domestic energy prices below their efficient level can shield energy users from cost shocks, yet little is known about whether fossil fuel underpricing shapes how industrial structure adjusts to climate disasters. Combining global value chain output for 77 countries and 18 manufacturing sectors over 2016&ndash;2022 with IMF estimates of fossil fuel underpricing and EM-DAT disaster records, I find that in disaster years the share of manufacturing value-chain output produced by carbon-intensive sectors rises with underpricing (<em>p</em> = 0.006), by about one percentage point at the 90th percentile, while it falls slightly and insignificantly where fuel is priced close to cost. The pattern holds with country-specific trends and with a control for fossil rent exposure, and sector-level estimates with country-sector, country-year and sector-year fixed effects point the same way (<em>p</em> = 0.041). Sanctions and armed conflict show no comparable pattern, and the association is strongest in resource-rich economies with weak democratic accountability. Because underpricing varies mainly across countries, the estimates compare pricing regimes and are conditional associations. <a href="https://doi.org/10.5281/zenodo.20468571" target="_blank" rel="noopener">Replication package</a>.</p>
+                    <details class="abstract">
+                        <summary>Abstract</summary>
+                        <p>Holding domestic energy prices below their efficient level can shield energy users from cost shocks, yet little is known about whether fossil fuel underpricing shapes how industrial structure adjusts to climate disasters. Combining global value chain output for 77 countries and 18 manufacturing sectors over 2016&ndash;2022 with IMF estimates of fossil fuel underpricing and EM-DAT disaster records, I find that in disaster years the share of manufacturing value-chain output produced by carbon-intensive sectors rises with underpricing (<em>p</em> = 0.006), by about one percentage point at the 90th percentile, while it falls slightly and insignificantly where fuel is priced close to cost. The pattern holds with country-specific trends and with a control for fossil rent exposure, and sector-level estimates with country-sector, country-year and sector-year fixed effects point the same way (<em>p</em> = 0.041). Sanctions and armed conflict show no comparable pattern, and the association is strongest in resource-rich economies with weak democratic accountability. Because underpricing varies mainly across countries, the estimates compare pricing regimes and are conditional associations. <a href="https://doi.org/10.5281/zenodo.20468571" target="_blank" rel="noopener">Replication package</a>.</p>
+                    </details>
                 </article>
 
                 <article class="research-item">
                     <div class="research-meta">Working Paper &nbsp;·&nbsp; October 2026</div>
                     <h3>Heat beyond the Farm Gate: Offsetting Supply and Demand Responses in European Food and Drink Manufacturing</h3>
                     <p class="research-authors"><strong>Uke, O. D.</strong>, Ben Amar, A., Gorelkina, O.</p>
-                    <p>Heat reaches food and drink manufacturers through the supply of farm inputs and the demand for their products, and the two channels can move output in opposite directions. We estimate monthly weather responses for food and drink industries in 21 European countries, and for raw milk deliveries and slaughter, over 2000–2026, identifying them from differences between countries' weather in the same month. In the average country a summer month 1 °C warmer than normal lowers raw milk deliveries by 0.3% and bakery output by 0.8% and raises beverage output by 2.0%. The milk and meat losses follow days above 30 °C rather than heat that is unusual for the season, occur in warm but not cool months and are not recovered, as livestock heat stress would produce; beverage output follows both kinds of heat and moves with the price of non-alcoholic beverages, as a demand shift would. Because the responses offset, 81% of the gross change in value added cancels, the food products total barely moves, and beverages are the only one of 24 manufacturing divisions to respond. Aggregate food output therefore understates how exposed the livestock-based food chain is to heat.</p>
+                    <details class="abstract">
+                        <summary>Abstract</summary>
+                        <p>Heat reaches food and drink manufacturers through the supply of farm inputs and the demand for their products, and the two channels can move output in opposite directions. We estimate monthly weather responses for food and drink industries in 21 European countries, and for raw milk deliveries and slaughter, over 2000–2026, identifying them from differences between countries' weather in the same month. In the average country a summer month 1 °C warmer than normal lowers raw milk deliveries by 0.3% and bakery output by 0.8% and raises beverage output by 2.0%. The milk and meat losses follow days above 30 °C rather than heat that is unusual for the season, occur in warm but not cool months and are not recovered, as livestock heat stress would produce; beverage output follows both kinds of heat and moves with the price of non-alcoholic beverages, as a demand shift would. Because the responses offset, 81% of the gross change in value added cancels, the food products total barely moves, and beverages are the only one of 24 manufacturing divisions to respond. Aggregate food output therefore understates how exposed the livestock-based food chain is to heat.</p>
+                    </details>
                 </article>
 
                 
@@ -916,28 +987,40 @@
                     <div class="research-meta">Work in Progress &nbsp;·&nbsp; Target: Business Strategy and the Environment</div>
                     <h3>Carbon Accounting Capability and Exposure to the EU Carbon Border Adjustment Mechanism: Evidence from African Exporters</h3>
                     <p class="research-authors"><strong>Uke, O. D.</strong>, Santos, L. (COPPE, UFRJ)</p>
-                    <p>Border carbon pricing is usually studied as trade policy falling on countries. It falls on consignments, and charges a conservative default unless a producer can verify actual emissions inside the regulatory boundary. The capability it rewards is <em>boundary fit</em>: emissions measured on the system boundary the regulating jurisdiction prices, which is distinct from both cleanliness and disclosure. Liability is computed line by line for 1,760 eight-digit tariff codes from European import declarations and official default values, deducting the year-specific free-allocation credit along the statutory phase-in path. African exporters face EUR 1,768.1 million annually on the 2023–2025 mean at full phase-in, with incidence reaching 49.0% of customs value on semi-finished steel against a zero applied tariff, so the mechanism reintroduces the tariff escalation that trade policy removed. Five installation cases show boundary fit distributed independently of ownership form, firm size and country income: the best-placed producer is 94% state-owned, while a listed multinational's subsidiary publishes nothing at installation level. Because the regulation credits only explicitly paid carbon prices, 24% to 69% of the required reform is invisible to the deduction.</p>
+                    <details class="abstract">
+                        <summary>Abstract</summary>
+                        <p>Border carbon pricing is usually studied as trade policy falling on countries. It falls on consignments, and charges a conservative default unless a producer can verify actual emissions inside the regulatory boundary. The capability it rewards is <em>boundary fit</em>: emissions measured on the system boundary the regulating jurisdiction prices, which is distinct from both cleanliness and disclosure. Liability is computed line by line for 1,760 eight-digit tariff codes from European import declarations and official default values, deducting the year-specific free-allocation credit along the statutory phase-in path. African exporters face EUR 1,768.1 million annually on the 2023–2025 mean at full phase-in, with incidence reaching 49.0% of customs value on semi-finished steel against a zero applied tariff, so the mechanism reintroduces the tariff escalation that trade policy removed. Five installation cases show boundary fit distributed independently of ownership form, firm size and country income: the best-placed producer is 94% state-owned, while a listed multinational's subsidiary publishes nothing at installation level. Because the regulation credits only explicitly paid carbon prices, 24% to 69% of the required reform is invisible to the deduction.</p>
+                    </details>
                 </article>
 
                 <article class="research-item">
                     <div class="research-meta">Work in Progress</div>
                     <h3>Climate Shocks and Food Manufacturing: Aggregation Bias in the United Kingdom</h3>
                     <p class="research-authors"><strong>Uke, O. D.</strong>, Ben Amar, A., Gorelkina, O.</p>
-                    <p>Presented at the 3rd QFDAM Conference, Rabat, June 2026. Climate-macro studies typically model the food system as a single sector. Using UK quarterly data for 1990–2025, we separate primary agriculture from downstream food manufacturing and ask what a single food-sector climate coefficient conceals. A food-system VARX estimated on the same data has an impact response less than half the agricultural one, and a Monte Carlo experiment shows that it systematically erases the persistent decline the disaggregated estimates imply. A single food-sector climate coefficient therefore depends on sectoral composition and is not a structural parameter. The sectoral response estimates are being rebuilt.</p>
+                    <details class="abstract">
+                        <summary>Abstract</summary>
+                        <p>Presented at the 3rd QFDAM Conference, Rabat, June 2026. Climate-macro studies typically model the food system as a single sector. Using UK quarterly data for 1990–2025, we separate primary agriculture from downstream food manufacturing and ask what a single food-sector climate coefficient conceals. A food-system VARX estimated on the same data has an impact response less than half the agricultural one, and a Monte Carlo experiment shows that it systematically erases the persistent decline the disaggregated estimates imply. A single food-sector climate coefficient therefore depends on sectoral composition and is not a structural parameter. The sectoral response estimates are being rebuilt.</p>
+                    </details>
                 </article>
 
                 <article class="research-item">
                     <div class="research-meta">Work in Progress</div>
                     <h3>Sovereign Climate Risk and Corporate Bond Spreads: Evidence from Emerging Markets</h3>
                     <p class="research-authors"><strong>Uke, O. D.</strong>, Santos, L. (COPPE, UFRJ)</p>
-                    <p>Monthly panel of emerging-market corporate bonds for 2018–2024, matched to sovereign CDS, rating actions, EM-DAT disasters and physically measured tropical cyclone tracks, with pre-registered hypotheses and randomisation inference. Current estimates find no sovereign transmission, no change in market access and no average corporate repricing after disasters, and do not support state backing as an insulation mechanism. Developed under the joint doctoral agreement with COPPE, UFRJ.</p>
+                    <details class="abstract">
+                        <summary>Abstract</summary>
+                        <p>Monthly panel of emerging-market corporate bonds for 2018–2024, matched to sovereign CDS, rating actions, EM-DAT disasters and physically measured tropical cyclone tracks, with pre-registered hypotheses and randomisation inference. Current estimates find no sovereign transmission, no change in market access and no average corporate repricing after disasters, and do not support state backing as an insulation mechanism. Developed under the joint doctoral agreement with COPPE, UFRJ.</p>
+                    </details>
                 </article>
 
                 <article class="research-item">
                     <div class="research-meta">Dissertation Chapter</div>
                     <h3>Building Resilience, Reducing Risk: A Systematic Review of Climate Resilience, Climate Finance Impacts, and Market Mispricing in the Global South</h3>
                     <p class="research-authors"><strong>Uke, O. D.</strong>, Ben Amar, A., Gorelkina, O.</p>
-                    <p>A PRISMA-based systematic literature review consolidating the relationship between climate resilience initiatives, financial risk reduction, and market mispricing in the Global South. Retained as dissertation material rather than submitted separately.</p>
+                    <details class="abstract">
+                        <summary>Abstract</summary>
+                        <p>A PRISMA-based systematic literature review consolidating the relationship between climate resilience initiatives, financial risk reduction, and market mispricing in the Global South. Retained as dissertation material rather than submitted separately.</p>
+                    </details>
                 </article>
 
                 <h3 class="research-subhead">Earlier Publications in Soil and Crop Science
